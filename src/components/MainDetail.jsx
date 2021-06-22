@@ -53,6 +53,8 @@ export default function MainDetail({
       setCounter(30);
     }
   }, [id, counter, setCounter, updateCryptoData]);
+  //DEPENDANCIES: counter, setCounter, getCriptoUpdateUrl(id), updateCryptoData, id
+
   ///////////////////////////////////////////////////////////
 
   // You can turn this into a custom hook////////////////////

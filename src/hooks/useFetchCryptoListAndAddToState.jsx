@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
-function useFetchAndAddToState(fetchURL) {
+function useFetchCryptoListAndAddToState(fetchURL) {
 const [list, setList] = useState([]);
 
     useEffect(() => {
             fetch(fetchURL)
                 .then((resp) => resp.json())
-                .then(setList);
+                .then((setList));
     }, [setList]);
 
     return [list, setList]
 }
 
-export default useFetchAndAddToState
+export default useFetchCryptoListAndAddToState
 

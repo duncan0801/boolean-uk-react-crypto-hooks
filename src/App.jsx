@@ -4,7 +4,7 @@ import { CRIPTO_LIST } from "./constants";
 import MainDetail from "./components/MainDetail";
 import NewsFeed from "./components/NewsFeed";
 import SideList from "./components/SideList";
-import useFetchAndAddToState from "./hooks/useFetchAndAddToState";
+import useFetchCryptoListAndAddToState from "./hooks/useFetchCryptoListAndAddToState";
 
 //////////////////////////////////////////////////
 //                                              //
@@ -14,7 +14,7 @@ import useFetchAndAddToState from "./hooks/useFetchAndAddToState";
 
 function App() {
   const [selectedCrypto, setSelectedCripto] = useState(null);
-  const [cryptoList, setCryptoList] = useFetchAndAddToState(CRIPTO_LIST)
+  const [cryptoList, setCryptoList] = useFetchCryptoListAndAddToState(CRIPTO_LIST)
   // You can turn this into a custom hook////////////////////
   
 
