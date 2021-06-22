@@ -4,6 +4,7 @@ import { CRIPTO_LIST } from "./constants";
 import MainDetail from "./components/MainDetail";
 import NewsFeed from "./components/NewsFeed";
 import SideList from "./components/SideList";
+import useFetchAndAddToState from "./hooks/useFetchAndAddToState";
 
 //////////////////////////////////////////////////
 //                                              //
@@ -12,15 +13,15 @@ import SideList from "./components/SideList";
 //////////////////////////////////////////////////
 
 function App() {
-  const [cryptoList, setCryptoList] = useState([]);
   const [selectedCrypto, setSelectedCripto] = useState(null);
-
+  const [cryptoList, setCryptoList] = useFetchAndAddToState(CRIPTO_LIST)
   // You can turn this into a custom hook////////////////////
-  useEffect(() => {
-    fetch(CRIPTO_LIST)
-      .then((resp) => resp.json())
-      .then(setCryptoList);
-  }, [setCryptoList]);
+  
+
+  // STATE NEEDEED: cryptoList
+  // INPUT: fetch URL
+  // OUTPUT: promise with the parsed json, 
+  // ACTION: fetch from URL and parsew the data
   ///////////////////////////////////////////////////////////
 
   function selectCrypto(selectedId) {
